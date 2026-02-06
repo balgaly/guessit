@@ -1,0 +1,94 @@
+name: Feature Request
+description: Propose a new feature for GuessIt
+title: "[Feature]: "
+labels: ["type:feature", "priority:medium"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest a feature! Please fill out the form below to help us understand your request.
+
+  - type: input
+    id: ticket-id
+    attributes:
+      label: Ticket ID
+      description: Auto-generated after issue creation (e.g., GI-045). Leave blank for now.
+      placeholder: "Will be assigned automatically"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What feature would you like to see and why does it matter?
+      placeholder: Clear description of the feature request and its value
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this feature is complete?
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Criterion 3
+      value: |
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Technical Notes
+      description: Any implementation details, constraints, or considerations (optional)
+      placeholder: Technical approach, constraints, or dependencies
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent is this feature?
+      options:
+        - low
+        - medium
+        - high
+        - critical
+      default: 1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Assigned Agent
+      description: Which agent should handle this? (Can be changed later)
+      options:
+        - backend-lead
+        - frontend-lead
+        - devops-engineer
+        - security-engineer
+        - qa-engineer
+        - cto-architect
+        - product-manager
+        - data-analyst
+        - ux-designer
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-files
+    attributes:
+      label: Related Files
+      description: List files that may be affected (optional)
+      placeholder: |
+        - src/app/api/groups/route.ts
+        - src/components/GroupCard.tsx
+    validations:
+      required: false

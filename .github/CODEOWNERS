@@ -1,0 +1,33 @@
+# CODEOWNERS file for GuessIt
+#
+# Lines starting with '#' are comments.
+# Each line is a file pattern followed by one or more owners.
+#
+# These owners will be the default owners for everything in the repo.
+# Unless a later match takes precedence, @balgaly will be requested for
+# review when someone opens a pull request.
+
+# Default owner for everything
+* @balgaly
+
+# GitHub configuration and workflows
+/.github/ @balgaly
+/.github/workflows/ @balgaly
+
+# Documentation
+/docs/ @balgaly
+*.md @balgaly
+
+# Configuration files
+/.mcp.json @balgaly
+/package.json @balgaly
+/tsconfig.json @balgaly
+/next.config.js @balgaly
+/tailwind.config.ts @balgaly
+
+# Claude Code configuration
+/.claude/ @balgaly
+
+# Security-sensitive files
+/.env.example @balgaly
+/supabase/ @balgaly
