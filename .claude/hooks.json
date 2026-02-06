@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "command": "echo '✅ File modified — remember to run tests for changes'"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash(rm -rf *|rm -r /|DROP TABLE|DROP DATABASE)",
+        "command": "echo '🚨 BLOCKED: Destructive command detected' && exit 1"
+      }
+    ]
+  }
+}
