@@ -32,8 +32,11 @@ next-env.d.ts
 # Supabase
 .supabase/
 
-# Claude Code MCP Configuration (contains API keys)
-.mcp.json
+# Claude Code Configuration
+.mcp.json                      # MCP configuration (contains API keys)
+.claude/*.local.json           # User-specific Claude settings
+.claude/projects/              # Auto memory and conversation history
+.claude/memory/                # Alternative memory location
 
 # Debug
 npm-debug.log*
