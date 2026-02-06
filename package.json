@@ -1,0 +1,27 @@
+{
+  "name": "guessit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Social prediction platform for competing with friends on sports events",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/balgaly/guessit.git"
+  },
+  "license": "MIT",
+  "author": "balgaly",
+  "scripts": {
+    "dev": "echo 'Next.js dev server - to be implemented'",
+    "build": "echo 'Next.js build - to be implemented'",
+    "start": "echo 'Next.js start - to be implemented'",
+    "lint": "echo 'ESLint - to be implemented' && exit 0",
+    "typecheck": "echo 'TypeScript check - to be implemented' && exit 0",
+    "test": "echo 'Vitest - to be implemented' && exit 0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
+}
