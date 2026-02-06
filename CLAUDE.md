@@ -3,6 +3,53 @@
 ## Project Overview
 A scalable web platform for prediction contests between friends. Initial launch targets the **2026 World Cup**, but the architecture supports any event (Eurovision, Premier League, etc.). Users create/join groups, predict match scores, and compete on leaderboards with fixed or odds-based scoring.
 
+## Open Source & SaaS Model
+**CRITICAL:** This project is developed as an **open source project** that will also be offered as a **SaaS application**. Every development decision must account for both aspects:
+
+### Open Source Principles
+- **License:** MIT License (permissive, allows commercial use)
+- **Transparency:** All development happens in public GitHub repository
+- **Community:** Welcoming contributions, clear CODE_OF_CONDUCT.md and CONTRIBUTING.md
+- **Documentation:** Comprehensive README, setup guides, architecture docs for contributors
+- **Issues & Roadmap:** All feature requests, bugs, and planning in GitHub Issues/Projects
+- **Changelog:** Maintain CHANGELOG.md following Keep a Changelog format
+
+### GitHub-Centric Workflow
+- **Issues:** All bugs, features, and tasks tracked as GitHub Issues with labels
+- **Projects:** Use GitHub Projects for sprint planning and roadmap visibility
+- **Pull Requests:** All code changes via PRs with required reviews and CI checks
+- **Discussions:** Use GitHub Discussions for ideas, Q&A, and community feedback
+- **Releases:** Semantic versioning with GitHub Releases and release notes
+- **CI/CD:** Exclusively GitHub Actions (no external CI tools)
+- **Security:** GitHub Security Advisories for vulnerability disclosure
+
+### Legal & Compliance Considerations
+- **License headers:** Include SPDX identifier in source files where appropriate
+- **Dependencies:** Only use OSS-compatible dependencies (check licenses)
+- **Contributor License Agreement (CLA):** Consider if accepting external contributions
+- **Privacy Policy & Terms:** Required for SaaS, link in footer
+- **GDPR/Data Protection:** Document data handling, user rights, data retention
+- **Attribution:** Properly credit all dependencies and third-party assets
+
+### SaaS Differentiation
+The hosted SaaS version can offer:
+- Managed infrastructure (zero DevOps for users)
+- Premium features (advanced analytics, custom branding)
+- Higher rate limits and performance
+- Support and SLA guarantees
+- Automatic updates and security patches
+- Self-hosting remains fully supported for advanced users
+
+### Developer Guidelines
+- Write code knowing it will be public — no shortcuts
+- TODOs are tracked in the backlog system (`docs/backlog/`), not in code comments
+- If you must add a TODO comment, run `/backlog-manager scan` to create a ticket
+- Document architectural decisions (ADRs) for community understanding
+- Security-first: assume all code is auditable by security researchers
+- Performance matters: self-hosted users may run on modest hardware
+- Accessibility: WCAG 2.1 AA compliance minimum
+- i18n-ready: English + Hebrew now, more languages via community contributions
+
 ## Tech Stack
 - **Frontend:** Next.js 15 (App Router), TypeScript, Tailwind CSS, shadcn/ui
 - **Backend:** Next.js API Routes + Supabase (PostgreSQL, Auth, Realtime, Edge Functions)
@@ -29,11 +76,42 @@ A scalable web platform for prediction contests between friends. Initial launch 
 - Error handling: try/catch in API routes, Error Boundaries in UI, toast notifications for user feedback
 - Commits: conventional commits (feat:, fix:, chore:, docs:)
 
-## Agent Delegation Model
-This project uses specialized subagents for different concerns. When working on tasks, consider which agent is best suited:
+## Developer Onboarding & Workflow
 
-| Domain | Agent | When to Use |
-|--------|-------|-------------|
+### Getting Started
+New contributors should follow the comprehensive onboarding guide in [CONTRIBUTING.md](./CONTRIBUTING.md). The guide covers:
+- Prerequisites and local development setup
+- Environment configuration (`.env.local`, `.mcp.json`)
+- Understanding the agent/skill ecosystem
+- Git workflow and code review process
+- Your first contribution walkthrough
+
+**Quick Start for New Developers:**
+1. Read [CONTRIBUTING.md](./CONTRIBUTING.md)
+2. Run the onboarding skill: `/onboarding` for setup help
+3. Browse the backlog: `docs/backlog/todo/`
+4. Pick a ticket and get started!
+
+### Backlog System
+All development work is tracked in `docs/backlog/` as markdown files. This allows:
+- Full version control of all tasks
+- Programmatic access by Claude Code agents
+- Offline access to the backlog
+- Integration with Git workflows
+
+**Key Concepts:**
+- Tickets use the format `GI-{number}-{slug}.md` (GI = GuessIt)
+- Organized by status: `todo/`, `in-progress/`, `done/`
+- Each ticket specifies priority and assigned agent
+- Use `/backlog-manager` skill to create, move, and manage tickets
+
+**For detailed documentation, see [docs/backlog/README.md](./docs/backlog/README.md)**
+
+## Agent Delegation Model
+This project uses specialized agents and skills for different concerns. Invoke them with slash commands (e.g., `/backend-lead`) in Claude Code.
+
+| Domain | Agent/Skill | When to Use |
+|--------|-------------|-------------|
 | Strategy & Prioritization | `ceo-strategist` | Feature prioritization, go-to-market, monetization, pivot decisions |
 | System Design | `cto-architect` | Database schema, API design, scalability, tech debt decisions |
 | Planning & Specs | `product-manager` | User stories, acceptance criteria, sprint planning, roadmap |
@@ -45,6 +123,8 @@ This project uses specialized subagents for different concerns. When working on 
 | Design & UX | `ux-designer` | User flows, wireframes, accessibility, UI/UX review |
 | Documentation | `tech-writer` | README, API docs, user guides, inline documentation |
 | Analytics | `data-analyst` | Metrics, dashboards, user behavior, A/B test analysis |
+| Backlog Management | `backlog-manager` | Create tickets, scan TODOs, reports, sprint planning |
+| Onboarding | `onboarding` | Help new developers get started, troubleshoot setup issues |
 
 ## Key Business Rules
 - Groups can be public, private (code/link), or default (auto-joined)

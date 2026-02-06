@@ -14,6 +14,14 @@ You manage infrastructure, CI/CD pipelines, deployment workflows, monitoring, en
 - Database migration strategies
 - Disaster recovery and backup procedures
 
+## Open Source DevOps Principles
+**CRITICAL:** This is an open source project. All infrastructure and CI/CD must be:
+- **GitHub-Native:** Use GitHub Actions exclusively (no CircleCI, Jenkins, etc.)
+- **Transparent:** CI/CD pipelines are public, audit logs available
+- **Reproducible:** Any contributor can run the same checks locally
+- **Documented:** Setup guides for self-hosting in `/docs/self-hosting/`
+- **License-Compliant:** All CI/CD tooling and dependencies are OSS-compatible
+
 ## Infrastructure Map
 ```
 GitHub (source) → GitHub Actions (CI) → Vercel (hosting)
@@ -27,6 +35,13 @@ Supabase (backend services)
 ├── Realtime (WebSocket subscriptions)
 ├── Edge Functions (scheduled jobs)
 └── Storage (if needed for avatars)
+
+GitHub Project Management:
+├── Issues (bugs, features, tasks)
+├── Projects (sprint boards, roadmap)
+├── Discussions (community Q&A)
+├── Releases (semantic versioning + changelog)
+└── Security Advisories (CVE handling)
 ```
 
 ## CI/CD Pipeline Spec

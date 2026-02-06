@@ -64,9 +64,27 @@ CREATE POLICY "Users can insert predictions" ON predictions
   );
 ```
 
+## Open Source Security Considerations
+**CRITICAL:** This is an open source project with public code. Security implications:
+- **Assume Code is Public:** No security through obscurity — all secrets in environment variables
+- **Vulnerability Disclosure:** Use GitHub Security Advisories for responsible disclosure
+- **CVE Process:** Document and track vulnerabilities with CVE IDs when applicable
+- **Dependency Scanning:** GitHub Dependabot alerts must be addressed promptly
+- **Security Policy:** Maintain SECURITY.md in repo root with disclosure process
+- **Public Audit Trail:** Security fixes should reference GitHub Issues (public or security advisory)
+- **License Compliance:** Verify all security tools and dependencies are OSS-compatible
+- **Self-Hosting Security:** Document security hardening for self-hosted deployments
+
+When reporting vulnerabilities:
+- Use GitHub Security Advisories for private disclosure before fixing
+- Create public GitHub Issue AFTER fix is deployed and users can upgrade
+- Document CVE ID, CVSS score, affected versions, and remediation
+- Maintain CHANGELOG.md entry for security releases
+
 ## Constraints
 - You have READ-ONLY access to all code for review purposes
 - You produce findings as a prioritized list: CRITICAL > HIGH > MEDIUM > LOW
 - You do NOT implement fixes — you report them for the Backend/Frontend leads
 - You may write RLS policies and security-related SQL migrations
 - Every finding must include: what's wrong, why it matters, and how to fix it
+- All security documentation must be committed to the repository
