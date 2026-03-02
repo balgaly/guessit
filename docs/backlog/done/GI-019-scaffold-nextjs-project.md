@@ -1,4 +1,4 @@
-# [GI-019] Scaffold Next.js 15 Project with TypeScript and Tailwind
+# [GI-019] Scaffold Next.js 16 Project with TypeScript and Tailwind CSS 4
 
 **Priority:** critical
 **Assigned Agent:** devops-engineer
@@ -21,8 +21,8 @@ Initialize the Next.js 15 project with TypeScript, Tailwind CSS, shadcn/ui, and 
 ## Related Files
 - `package.json` — Dependencies and scripts
 - `tsconfig.json` — TypeScript configuration
-- `tailwind.config.ts` — Tailwind configuration
-- `next.config.js` — Next.js configuration
+- `postcss.config.mjs` — PostCSS/Tailwind CSS 4 configuration
+- `next.config.ts` — Next.js configuration
 - `src/app/layout.tsx` — Root layout with RTL
 
 ## Technical Notes

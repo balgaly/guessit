@@ -18,7 +18,7 @@ The initial launch targets the **2026 FIFA World Cup**, but the architecture sup
 
 ## Tech Stack
 
-- **Frontend:** Next.js 15 (App Router), TypeScript, Tailwind CSS, shadcn/ui
+- **Frontend:** Next.js 16 (App Router), TypeScript, Tailwind CSS 4, shadcn/ui
 - **Backend:** Next.js API Routes + Supabase (PostgreSQL, Auth, Realtime)
 - **Auth:** Google Sign-In via Supabase Auth
 - **Hosting:** Vercel + Supabase
