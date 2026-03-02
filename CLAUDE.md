@@ -3,14 +3,13 @@
 ## Project Overview
 A scalable web platform for prediction contests between friends. Initial launch targets the **2026 World Cup**, but the architecture supports any event (Eurovision, Premier League, etc.). Users create/join groups, predict match scores, and compete on leaderboards with fixed or odds-based scoring.
 
-## Open Source & SaaS Model
-**CRITICAL:** This project is developed as an **open source project** that will also be offered as a **SaaS application**. Every development decision must account for both aspects:
+## Proprietary SaaS Model
+**CRITICAL:** This project is **proprietary software** offered as a **SaaS application**. The source code is publicly visible on GitHub for transparency, but all rights are reserved. No permission is granted to copy, modify, or distribute.
 
-### Open Source Principles
-- **License:** MIT License (permissive, allows commercial use)
-- **Transparency:** All development happens in public GitHub repository
-- **Community:** Welcoming contributions, clear CODE_OF_CONDUCT.md and CONTRIBUTING.md
-- **Documentation:** Comprehensive README, setup guides, architecture docs for contributors
+### Principles
+- **License:** All Rights Reserved (no open source license)
+- **Transparency:** Source code visible on public GitHub repository
+- **Documentation:** Comprehensive README, setup guides, architecture docs
 - **Issues & Roadmap:** All feature requests, bugs, and planning in GitHub Issues/Projects
 - **Changelog:** Maintain CHANGELOG.md following Keep a Changelog format
 
@@ -24,31 +23,19 @@ A scalable web platform for prediction contests between friends. Initial launch 
 - **Security:** GitHub Security Advisories for vulnerability disclosure
 
 ### Legal & Compliance Considerations
-- **License headers:** Include SPDX identifier in source files where appropriate
 - **Dependencies:** Only use OSS-compatible dependencies (check licenses)
-- **Contributor License Agreement (CLA):** Consider if accepting external contributions
 - **Privacy Policy & Terms:** Required for SaaS, link in footer
 - **GDPR/Data Protection:** Document data handling, user rights, data retention
 - **Attribution:** Properly credit all dependencies and third-party assets
-
-### SaaS Differentiation
-The hosted SaaS version can offer:
-- Managed infrastructure (zero DevOps for users)
-- Premium features (advanced analytics, custom branding)
-- Higher rate limits and performance
-- Support and SLA guarantees
-- Automatic updates and security patches
-- Self-hosting remains fully supported for advanced users
 
 ### Developer Guidelines
 - Write code knowing it will be public — no shortcuts
 - TODOs are tracked in the backlog system (`docs/backlog/`), not in code comments
 - If you must add a TODO comment, run `/backlog-manager scan` to create a ticket
-- Document architectural decisions (ADRs) for community understanding
+- Document architectural decisions (ADRs) for understanding
 - Security-first: assume all code is auditable by security researchers
-- Performance matters: self-hosted users may run on modest hardware
 - Accessibility: WCAG 2.1 AA compliance minimum
-- i18n-ready: English + Hebrew now, more languages via community contributions
+- i18n-ready: English + Hebrew now, more languages later
 
 ## Tech Stack
 - **Frontend:** Next.js 15 (App Router), TypeScript, Tailwind CSS, shadcn/ui

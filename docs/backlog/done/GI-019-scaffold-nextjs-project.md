@@ -2,21 +2,21 @@
 
 **Priority:** critical
 **Assigned Agent:** devops-engineer
-**Status:** todo
+**Status:** done
 **Created:** 2026-02-06
 
 ## Description
 Initialize the Next.js 15 project with TypeScript, Tailwind CSS, shadcn/ui, and proper folder structure. This is the foundation for all development work.
 
 ## Acceptance Criteria
-- [ ] Next.js 15 with App Router initialized
-- [ ] TypeScript configured in strict mode
-- [ ] Tailwind CSS installed and configured
-- [ ] shadcn/ui installed with component registry
-- [ ] Folder structure matches CLAUDE.md (app/, components/, lib/, types/, hooks/)
-- [ ] pnpm as package manager
-- [ ] RTL support configured in root layout (`dir="rtl"`)
-- [ ] Dev server runs successfully (`pnpm dev`)
+- [x] Next.js 16 with App Router initialized
+- [x] TypeScript configured in strict mode
+- [x] Tailwind CSS 4 installed and configured
+- [x] shadcn/ui installed with component registry
+- [x] Folder structure matches CLAUDE.md (app/, components/, lib/, types/, hooks/)
+- [x] pnpm as package manager
+- [x] RTL support configured in root layout (`dir="rtl"`)
+- [x] Dev server and build run successfully
 
 ## Related Files
 - `package.json` — Dependencies and scripts
