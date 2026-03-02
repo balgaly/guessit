@@ -1,11 +1,18 @@
 {
-  "$schema": "https://modelcontextprotocol.io/schemas/mcp.json",
   "mcpServers": {
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server"],
+      "env": {
+        "SUPABASE_URL": "<your-supabase-project-url>",
+        "SUPABASE_SERVICE_ROLE_KEY": "<your-service-role-key>"
+      }
+    },
     "github": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-github"],
       "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_YOUR_TOKEN_HERE"
+        "GITHUB_TOKEN": "<your-github-token>"
       }
     }
   }
